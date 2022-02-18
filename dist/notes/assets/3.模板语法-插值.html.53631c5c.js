@@ -1,0 +1,1 @@
+const e={key:"v-f05262b2",path:"/javascript/Vue/3.%E6%A8%A1%E6%9D%BF%E8%AF%AD%E6%B3%95-%E6%8F%92%E5%80%BC.html",title:"\u63D2\u503C",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:2,title:"$\\color{red}{notes:}$",slug:"color-red-notes",children:[]}],git:{},filePathRelative:"javascript/Vue/3.\u6A21\u677F\u8BED\u6CD5-\u63D2\u503C.md"};export{e as data};

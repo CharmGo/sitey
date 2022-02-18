@@ -1,0 +1,1 @@
+const t={key:"v-58d4996a",path:"/python/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/",title:"",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:2,title:"socket",slug:"socket",children:[]}],git:{},filePathRelative:"python/\u7F51\u7EDC\u7F16\u7A0B/README.md"};export{t as data};

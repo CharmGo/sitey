@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="generator" content="VuePress 2.0.0-beta.35">
+    <style>
+      :root {
+        --c-bg: #fff;
+      }
+      html.dark {
+        --c-bg: #22272e;
+      }
+      html, body {
+        background-color: var(--c-bg);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem('vuepress-color-scheme');
+			const systemDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+			if (userMode === 'dark' || (userMode !== 'light' && systemDarkMode)) {
+				document.documentElement.classList.toggle('dark', true);
+			}
+    </script>
+    <link rel="icon" href="/notes/public/logo.png"><title>charmgo</title><meta name="description" content="个人博客">
+    <link rel="modulepreload" href="/notes/assets/app.bfc0a8ee.js"><link rel="modulepreload" href="/notes/assets/3、指针.html.2d9f58fc.js"><link rel="modulepreload" href="/notes/assets/3、指针.html.95ead2dc.js"><link rel="modulepreload" href="/notes/assets/plugin-vue_export-helper.21dcd24c.js">
+    <link rel="stylesheet" href="/notes/assets/style.818a3841.css">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="theme-container"><!--[--><header ref_key="navbar" class="navbar"><div class="toggle-sidebar-button" title="toggle sidebar" aria-expanded="false" role="button" tabindex="0"><div class="icon" aria-hidden="true"><span></span><span></span><span></span></div></div><span><a href="/notes/" class=""><!----><span class="site-name">charmgo</span></a></span><div class="navbar-items-wrapper" style=""><!--[--><!--]--><!----><!--[--><!--]--><button class="toggle-dark-button" title="toggle dark mode"><svg style="" class="icon" focusable="false" viewBox="0 0 32 32"><path d="M16 12.005a4 4 0 1 1-4 4a4.005 4.005 0 0 1 4-4m0-2a6 6 0 1 0 6 6a6 6 0 0 0-6-6z" fill="currentColor"></path><path d="M5.394 6.813l1.414-1.415l3.506 3.506L8.9 10.318z" fill="currentColor"></path><path d="M2 15.005h5v2H2z" fill="currentColor"></path><path d="M5.394 25.197L8.9 21.691l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 25.005h2v5h-2z" fill="currentColor"></path><path d="M21.687 23.106l1.414-1.415l3.506 3.506l-1.414 1.414z" fill="currentColor"></path><path d="M25 15.005h5v2h-5z" fill="currentColor"></path><path d="M21.687 8.904l3.506-3.506l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 2.005h2v5h-2z" fill="currentColor"></path></svg><svg style="display:none;" class="icon" focusable="false" viewBox="0 0 32 32"><path d="M13.502 5.414a15.075 15.075 0 0 0 11.594 18.194a11.113 11.113 0 0 1-7.975 3.39c-.138 0-.278.005-.418 0a11.094 11.094 0 0 1-3.2-21.584M14.98 3a1.002 1.002 0 0 0-.175.016a13.096 13.096 0 0 0 1.825 25.981c.164.006.328 0 .49 0a13.072 13.072 0 0 0 10.703-5.555a1.01 1.01 0 0 0-.783-1.565A13.08 13.08 0 0 1 15.89 4.38A1.015 1.015 0 0 0 14.98 3z" fill="currentColor"></path></svg></button><!----></div></header><!--]--><div class="sidebar-mask"></div><!--[--><aside class="sidebar"><!----><!--[--><!--]--><ul class="sidebar-items"><!--[--><li><p tabindex="0" class="sidebar-item sidebar-heading"> <!----></p><!--[--><ul style="" class="sidebar-item-children"><!--[--><li><a aria-current="page" href="/notes/C/3%E3%80%81%E6%8C%87%E9%92%88.html#关于指针" class="router-link-active router-link-exact-active sidebar-item" aria-label="关于指针"><!--[--><!--]--> 关于指针 <!--[--><!--]--></a><!--[--><ul style="" class="sidebar-item-children"><!--[--><li><a aria-current="page" href="/notes/C/3%E3%80%81%E6%8C%87%E9%92%88.html#运算符" class="router-link-active router-link-exact-active sidebar-item" aria-label="*运算符"><!--[--><!--]--> *运算符 <!--[--><!--]--></a><!----></li><li><a aria-current="page" href="/notes/C/3%E3%80%81%E6%8C%87%E9%92%88.html#运算符-1" class="router-link-active router-link-exact-active sidebar-item" aria-label="&amp;运算符"><!--[--><!--]--> &amp;运算符 <!--[--><!--]--></a><!----></li><li><a aria-current="page" href="/notes/C/3%E3%80%81%E6%8C%87%E9%92%88.html#函数指针" class="router-link-active router-link-exact-active sidebar-item" aria-label="函数指针"><!--[--><!--]--> 函数指针 <!--[--><!--]--></a><!----></li><!--]--></ul><!--]--></li><li><a aria-current="page" href="/notes/C/3%E3%80%81%E6%8C%87%E9%92%88.html#exit" class="router-link-active router-link-exact-active sidebar-item" aria-label="exit()"><!--[--><!--]--> exit() <!--[--><!--]--></a><!----></li><li><a aria-current="page" href="/notes/C/3%E3%80%81%E6%8C%87%E9%92%88.html#atexit" class="router-link-active router-link-exact-active sidebar-item" aria-label="atexit()"><!--[--><!--]--> atexit() <!--[--><!--]--></a><!----></li><li><a aria-current="page" href="/notes/C/3%E3%80%81%E6%8C%87%E9%92%88.html#函数说明符" class="router-link-active router-link-exact-active sidebar-item" aria-label="函数说明符"><!--[--><!--]--> 函数说明符 <!--[--><!--]--></a><!--[--><ul style="" class="sidebar-item-children"><!--[--><li><a aria-current="page" href="/notes/C/3%E3%80%81%E6%8C%87%E9%92%88.html#extern-说明符" class="router-link-active router-link-exact-active sidebar-item" aria-label="extern 说明符"><!--[--><!--]--> extern 说明符 <!--[--><!--]--></a><!----></li><li><a aria-current="page" href="/notes/C/3%E3%80%81%E6%8C%87%E9%92%88.html#static-说明符" class="router-link-active router-link-exact-active sidebar-item" aria-label="static 说明符"><!--[--><!--]--> static 说明符 <!--[--><!--]--></a><!----></li><li><a aria-current="page" href="/notes/C/3%E3%80%81%E6%8C%87%E9%92%88.html#const-说明符" class="router-link-active router-link-exact-active sidebar-item" aria-label="const 说明符"><!--[--><!--]--> const 说明符 <!--[--><!--]--></a><!----></li><!--]--></ul><!--]--></li><li><a aria-current="page" href="/notes/C/3%E3%80%81%E6%8C%87%E9%92%88.html#数组的本质就是指针" class="router-link-active router-link-exact-active sidebar-item" aria-label="数组的本质就是指针"><!--[--><!--]--> 数组的本质就是指针 <!--[--><!--]--></a><!----></li><!--]--></ul><!--]--></li><!--]--></ul><!--[--><!--]--></aside><!--]--><!--[--><main class="page"><!--[--><!--]--><div class="theme-default-content"><!--[--><h2 id="关于指针" tabindex="-1"><a class="header-anchor" href="#关于指针" aria-hidden="true">#</a> 关于指针</h2><p>type* 变量 变量存储的是一个内存地址</p><p>type** 变量 变量存储的是另一个指针的内存地址</p><hr><h3 id="运算符" tabindex="-1"><a class="header-anchor" href="#运算符" aria-hidden="true">#</a> *运算符</h3><p><code>用来取出指针变量所指向的内存地址里面的值。</code></p><h3 id="运算符-1" tabindex="-1"><a class="header-anchor" href="#运算符-1" aria-hidden="true">#</a> &amp;运算符</h3><p><code>&amp;运算符用来取出一个变量所在的内存地址</code></p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>#include&lt;stdio.h&gt;
+int main()
+{
+	int i;
+	int* p=NULL;
+
+	i = 1;
+	p = &amp;i;
+	*p = 13;
+
+	printf(&quot;i的存储在内存的地址为:%p\n&quot;,&amp;i);
+	printf(&quot;将i的内存地址存在指针p里，输出指针p：%p\n&quot;,p);
+	printf(&quot;i的值被指针p改成了13:%d\n&quot;,i);
+
+	return 0;
+}
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><h3 id="函数指针" tabindex="-1"><a class="header-anchor" href="#函数指针" aria-hidden="true">#</a> 函数指针</h3><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>#include&lt;stdio.h&gt;
+void print();
+
+int main(){
+
+    void (*i)(int) = &amp;print;
+    // printf(&quot;%p&quot;,*i);
+    if(print == &amp;print){
+        (*i)(10);
+    }
+    
+    i(18);
+    
+    return 0;
+}
+
+void print(int a){
+    printf(&quot;%d\n&quot;,a);
+}
+
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><h2 id="exit" tabindex="-1"><a class="header-anchor" href="#exit" aria-hidden="true">#</a> exit()</h2><p>exit()函数用来终止整个程序的运行。一旦执行到该函数，程序就会立即结束。该函数的原型定义在头文件stdlib.h里面。</p><p>exit()可以向程序外部返回一个值，它的参数就是程序的返回值。一般来说，使用两个常量作为它的参数：EXIT_SUCCESS（相当于 0）表示程序运行成功，EXIT_FAILURE（相当于 1）表示程序异常中止。这两个常数也是定义在stdlib.h里面。</p><h2 id="atexit" tabindex="-1"><a class="header-anchor" href="#atexit" aria-hidden="true">#</a> atexit()</h2><p>用来登记exit()执行时额外执行的函数，用来做一些退出程序时的收尾工作 <code>int atexit(void (*func)(void));</code></p><hr><h2 id="函数说明符" tabindex="-1"><a class="header-anchor" href="#函数说明符" aria-hidden="true">#</a> 函数说明符</h2><ul><li><h3 id="extern-说明符" tabindex="-1"><a class="header-anchor" href="#extern-说明符" aria-hidden="true">#</a> extern 说明符</h3></li></ul><p>对于多文件的项目，源码文件会用到其他文件声明的函数。这时，当前文件里面，需要给出外部函数的原型，并用extern说明该函数的定义来自其他文件。</p><ul><li><h3 id="static-说明符" tabindex="-1"><a class="header-anchor" href="#static-说明符" aria-hidden="true">#</a> static 说明符</h3></li></ul><p>默认情况下，每次调用函数时，函数的内部变量都会重新初始化，不会保留上一次运行的值。static说明符可以改变这种行为。</p><ul><li><h3 id="const-说明符" tabindex="-1"><a class="header-anchor" href="#const-说明符" aria-hidden="true">#</a> const 说明符</h3></li></ul><p>函数参数里面的const说明符，表示函数内部不得修改该参数变量。</p><h2 id="数组的本质就是指针" tabindex="-1"><a class="header-anchor" href="#数组的本质就是指针" aria-hidden="true">#</a> 数组的本质就是指针</h2><p>数组第一个元素的内存地址表示着数组的地址</p><!--]--></div><footer class="page-meta"><!----><!----><!----></footer><!----><!--[--><!--]--></main><!--]--></div><!----><!--]--></div>
+    <script type="module" src="/notes/assets/app.bfc0a8ee.js" defer></script>
+  </body>
+</html>
