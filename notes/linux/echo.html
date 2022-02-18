@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="generator" content="VuePress 2.0.0-beta.35">
+    <style>
+      :root {
+        --c-bg: #fff;
+      }
+      html.dark {
+        --c-bg: #22272e;
+      }
+      html, body {
+        background-color: var(--c-bg);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem('vuepress-color-scheme');
+			const systemDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+			if (userMode === 'dark' || (userMode !== 'light' && systemDarkMode)) {
+				document.documentElement.classList.toggle('dark', true);
+			}
+    </script>
+    <link rel="icon" href="/notes/public/logo.png"><title>charmgo</title><meta name="description" content="个人博客">
+    <link rel="modulepreload" href="/notes/assets/app.ae0e5040.js"><link rel="modulepreload" href="/notes/assets/echo.html.5b13c2f1.js"><link rel="modulepreload" href="/notes/assets/echo.html.f53d4e10.js"><link rel="modulepreload" href="/notes/assets/plugin-vue_export-helper.21dcd24c.js">
+    <link rel="stylesheet" href="/notes/assets/style.818a3841.css">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="theme-container"><!--[--><header ref_key="navbar" class="navbar"><div class="toggle-sidebar-button" title="toggle sidebar" aria-expanded="false" role="button" tabindex="0"><div class="icon" aria-hidden="true"><span></span><span></span><span></span></div></div><span><a href="/notes/" class=""><!----><span class="site-name">charmgo</span></a></span><div class="navbar-items-wrapper" style=""><!--[--><!--]--><!----><!--[--><!--]--><button class="toggle-dark-button" title="toggle dark mode"><svg style="" class="icon" focusable="false" viewBox="0 0 32 32"><path d="M16 12.005a4 4 0 1 1-4 4a4.005 4.005 0 0 1 4-4m0-2a6 6 0 1 0 6 6a6 6 0 0 0-6-6z" fill="currentColor"></path><path d="M5.394 6.813l1.414-1.415l3.506 3.506L8.9 10.318z" fill="currentColor"></path><path d="M2 15.005h5v2H2z" fill="currentColor"></path><path d="M5.394 25.197L8.9 21.691l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 25.005h2v5h-2z" fill="currentColor"></path><path d="M21.687 23.106l1.414-1.415l3.506 3.506l-1.414 1.414z" fill="currentColor"></path><path d="M25 15.005h5v2h-5z" fill="currentColor"></path><path d="M21.687 8.904l3.506-3.506l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 2.005h2v5h-2z" fill="currentColor"></path></svg><svg style="display:none;" class="icon" focusable="false" viewBox="0 0 32 32"><path d="M13.502 5.414a15.075 15.075 0 0 0 11.594 18.194a11.113 11.113 0 0 1-7.975 3.39c-.138 0-.278.005-.418 0a11.094 11.094 0 0 1-3.2-21.584M14.98 3a1.002 1.002 0 0 0-.175.016a13.096 13.096 0 0 0 1.825 25.981c.164.006.328 0 .49 0a13.072 13.072 0 0 0 10.703-5.555a1.01 1.01 0 0 0-.783-1.565A13.08 13.08 0 0 1 15.89 4.38A1.015 1.015 0 0 0 14.98 3z" fill="currentColor"></path></svg></button><!----></div></header><!--]--><div class="sidebar-mask"></div><!--[--><aside class="sidebar"><!----><!--[--><!--]--><ul class="sidebar-items"><!--[--><li><p tabindex="0" class="sidebar-item sidebar-heading"> <!----></p><!----></li><!--]--></ul><!--[--><!--]--></aside><!--]--><!--[--><main class="page"><!--[--><!--]--><div class="theme-default-content"><!--[--><p>echo指令用于在Unix Like类的系统中输出指定的字符，可以通过特定的方式给输出的字符定义颜色及背景颜色。 默认情况下echo会输出灰色（白色）字符，背景为黑色。</p><div class="language-echo ext-echo line-numbers-mode"><pre class="language-echo"><code>
+x代表字符格式（0-7）
+0：最普通的，默认
+1：加高亮
+2：加深
+3：斜体
+4：下划线
+5：闪烁
+6：闪烁
+7：颜色反转
+
+y代表字符颜色
+
+
+
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><ol><li>给输出的字符指定颜色 借助echo的-e选项来实现，语法格式为：</li></ol><p><code>echo -e &quot;\033[3xmsome things you want to print out.\033[0m&quot;</code></p><p><code>\033[3xm</code>为ANSI控制码，表示要开始输出有颜色的字符了。 some things you want to print out.表示要输出的字符，和<code>3xm</code>紧挨着，如果中间有空格，输出的字符前面也会有空格。 3x为表示颜色的一组数字，x取值为0到7，分别代表的颜色如下：</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>30表示黑色。
+31表示红色。
+32表示绿色。
+33表示黄色。
+34表示蓝色。
+35表示紫色。
+36表示浅蓝色。
+37表示灰色。
+033[0m为ANSI控制码，表示结束输出有颜色的字符。
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><ol start="2"><li>给输出的字符指定背景颜色 同样借助echo的-e选项来实现，语法格式为：</li></ol><p><code>echo -e &quot;\033[4xsome things you want to print out.\033[0m&quot;</code></p><p><code>\033</code>开头的都为ANSI控制码，和指定字符的颜色不同的是，这里用的是<code>4x</code>，常用的背景颜色也共8种，x取值为0到7。常用背景色如下：</p><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>40表示背景为黑色。
+41表示背景为红色。
+42表示背景为绿色。
+43表示背景为黄色。
+44表示背景为蓝色。
+45表示背景为紫色。
+46表示背景为浅蓝色。
+47表示背景为灰白色。
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><ol start="3"><li>其它常用的ANSI控制码</li></ol><div class="language-text ext-text line-numbers-mode"><pre class="language-text"><code>\033[3m输出斜体字
+\033[4m给输出的字符加上下划线
+\033[5m让输出的字符闪烁显式
+\033[7m设置反显效果，即把背景色和字体颜色反过来显示
+</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><!--]--></div><footer class="page-meta"><!----><!----><!----></footer><!----><!--[--><!--]--></main><!--]--></div><!----><!--]--></div>
+    <script type="module" src="/notes/assets/app.ae0e5040.js" defer></script>
+  </body>
+</html>

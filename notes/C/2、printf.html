@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="generator" content="VuePress 2.0.0-beta.35">
+    <style>
+      :root {
+        --c-bg: #fff;
+      }
+      html.dark {
+        --c-bg: #22272e;
+      }
+      html, body {
+        background-color: var(--c-bg);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem('vuepress-color-scheme');
+			const systemDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+			if (userMode === 'dark' || (userMode !== 'light' && systemDarkMode)) {
+				document.documentElement.classList.toggle('dark', true);
+			}
+    </script>
+    <link rel="icon" href="/notes/public/logo.png"><title>charmgo</title><meta name="description" content="个人博客">
+    <link rel="modulepreload" href="/notes/assets/app.ae0e5040.js"><link rel="modulepreload" href="/notes/assets/2、printf.html.f52d85a5.js"><link rel="modulepreload" href="/notes/assets/2、printf.html.ef69da12.js"><link rel="modulepreload" href="/notes/assets/plugin-vue_export-helper.21dcd24c.js">
+    <link rel="stylesheet" href="/notes/assets/style.818a3841.css">
+  </head>
+  <body>
+    <div id="app"><!--[--><div class="theme-container"><!--[--><header ref_key="navbar" class="navbar"><div class="toggle-sidebar-button" title="toggle sidebar" aria-expanded="false" role="button" tabindex="0"><div class="icon" aria-hidden="true"><span></span><span></span><span></span></div></div><span><a href="/notes/" class=""><!----><span class="site-name">charmgo</span></a></span><div class="navbar-items-wrapper" style=""><!--[--><!--]--><!----><!--[--><!--]--><button class="toggle-dark-button" title="toggle dark mode"><svg style="" class="icon" focusable="false" viewBox="0 0 32 32"><path d="M16 12.005a4 4 0 1 1-4 4a4.005 4.005 0 0 1 4-4m0-2a6 6 0 1 0 6 6a6 6 0 0 0-6-6z" fill="currentColor"></path><path d="M5.394 6.813l1.414-1.415l3.506 3.506L8.9 10.318z" fill="currentColor"></path><path d="M2 15.005h5v2H2z" fill="currentColor"></path><path d="M5.394 25.197L8.9 21.691l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 25.005h2v5h-2z" fill="currentColor"></path><path d="M21.687 23.106l1.414-1.415l3.506 3.506l-1.414 1.414z" fill="currentColor"></path><path d="M25 15.005h5v2h-5z" fill="currentColor"></path><path d="M21.687 8.904l3.506-3.506l1.414 1.415l-3.506 3.505z" fill="currentColor"></path><path d="M15 2.005h2v5h-2z" fill="currentColor"></path></svg><svg style="display:none;" class="icon" focusable="false" viewBox="0 0 32 32"><path d="M13.502 5.414a15.075 15.075 0 0 0 11.594 18.194a11.113 11.113 0 0 1-7.975 3.39c-.138 0-.278.005-.418 0a11.094 11.094 0 0 1-3.2-21.584M14.98 3a1.002 1.002 0 0 0-.175.016a13.096 13.096 0 0 0 1.825 25.981c.164.006.328 0 .49 0a13.072 13.072 0 0 0 10.703-5.555a1.01 1.01 0 0 0-.783-1.565A13.08 13.08 0 0 1 15.89 4.38A1.015 1.015 0 0 0 14.98 3z" fill="currentColor"></path></svg></button><!----></div></header><!--]--><div class="sidebar-mask"></div><!--[--><aside class="sidebar"><!----><!--[--><!--]--><ul class="sidebar-items"><!--[--><li><p tabindex="0" class="sidebar-item sidebar-heading"> <!----></p><!--[--><ul style="" class="sidebar-item-children"><!--[--><li><a aria-current="page" href="/notes/C/2%E3%80%81printf.html#printf-占位符" class="router-link-active router-link-exact-active sidebar-item" aria-label="printf()占位符"><!--[--><!--]--> printf()占位符 <!--[--><!--]--></a><!----></li><li><a aria-current="page" href="/notes/C/2%E3%80%81printf.html#转义字符" class="router-link-active router-link-exact-active sidebar-item" aria-label="转义字符"><!--[--><!--]--> 转义字符 <!--[--><!--]--></a><!----></li><li><a aria-current="page" href="/notes/C/2%E3%80%81printf.html#字面量后缀" class="router-link-active router-link-exact-active sidebar-item" aria-label="字面量后缀"><!--[--><!--]--> 字面量后缀 <!--[--><!--]--></a><!----></li><!--]--></ul><!--]--></li><!--]--></ul><!--[--><!--]--></aside><!--]--><!--[--><main class="page"><!--[--><!--]--><div class="theme-default-content"><!--[--><h2 id="printf-占位符" tabindex="-1"><a class="header-anchor" href="#printf-占位符" aria-hidden="true">#</a> <code>printf()</code>占位符</h2><p>%a：浮点数。 %A：浮点数。 %c：字符。 %d：十进制整数。 %e：使用科学计数法的浮点数，指数部分的e为小写。 %E：使用科学计数法的浮点数，指数部分的E为大写。 %i：整数，基本等同于%d。 %f：小数（包含float类型和double类型）。 %g：6个有效数字的浮点数。整数部分一旦超过6位，就会自动转为科学计数法，指数部分的e为小写。 %G：等同于%g，唯一的区别是指数部分的E为大写。 %hd：十进制 short int 类型。 %ho：八进制 short int 类型。 %hx：十六进制 short int 类型。 %hu：unsigned short int 类型。 %ld：十进制 long int 类型。 %lo：八进制 long int 类型。 %lx：十六进制 long int 类型。 %lu：unsigned long int 类型。 %lld：十进制 long long int 类型。 %llo：八进制 long long int 类型。 %llx：十六进制 long long int 类型。 %llu：unsigned long long int 类型。 %Le：科学计数法表示的 long double 类型浮点数。 %Lf：long double 类型浮点数。 %n：已输出的字符串数量。该占位符本身不输出，只将值存储在指定变量之中。 %o：八进制整数。 %p：指针。 %s：字符串。 %u：无符号整数（unsigned int）。 %x：十六进制整数。 %zd：size_t类型。 %%：输出一个百分号。</p><h2 id="转义字符" tabindex="-1"><a class="header-anchor" href="#转义字符" aria-hidden="true">#</a> 转义字符</h2><p>\a：警报，这会使得终端发出警报声或出现闪烁，或者两者同时发生。 \b：退格键，光标回退一个字符，但不删除字符。 \f：换页符，光标移到下一页。在现代系统上，这已经反映不出来了，行为改成类似于\v。 \n：换行符。 \r：回车符，光标移到同一行的开头。 \t：制表符，光标移到下一个水平制表位，通常是下一个8的倍数。 \v：垂直分隔符，光标移到下一个垂直制表位，通常是下一行的同一列。 \0：null 字符，代表没有内容。注意，这个值不等于数字0。 转义写法还能使用八进制和十六进制表示一个字符。</p><p>\nn：字符的八进制写法，nn为八进制值。 \xnn：字符的十六进制写法，nn为十六进制值。</p><h2 id="字面量后缀" tabindex="-1"><a class="header-anchor" href="#字面量后缀" aria-hidden="true">#</a> 字面量后缀</h2><p>f和F：float类型。 l和L：对于整数是long int类型，对于小数是long double类型。 ll和LL：Long Long 类型，比如3LL。 u和U：表示unsigned int，比如15U、0377U。</p><!--]--></div><footer class="page-meta"><!----><!----><!----></footer><!----><!--[--><!--]--></main><!--]--></div><!----><!--]--></div>
+    <script type="module" src="/notes/assets/app.ae0e5040.js" defer></script>
+  </body>
+</html>

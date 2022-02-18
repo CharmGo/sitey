@@ -1,0 +1,1 @@
+const e={key:"v-72881372",path:"/markdown/",title:"",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:2,title:"use",slug:"use",children:[]}],git:{updatedTime:null,contributors:[]},filePathRelative:"markdown/README.md"};export{e as data};

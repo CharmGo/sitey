@@ -1,0 +1,1 @@
+const t={key:"v-83a32798",path:"/git/tip.html",title:"",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:2,title:"\u672C\u5730\u63D0\u4EA4",slug:"\u672C\u5730\u63D0\u4EA4",children:[]},{level:2,title:"\u62C9\u53D6\u63D0\u4EA4",slug:"\u62C9\u53D6\u63D0\u4EA4",children:[]}],git:{updatedTime:null,contributors:[]},filePathRelative:"git/tip.md"};export{t as data};
