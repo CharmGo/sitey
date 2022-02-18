@@ -1,1 +1,0 @@
-const t={key:"v-02c9d8f1",path:"/javascript/nodejs/fs.html",title:"",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:2,title:"\u540C\u6B65api",slug:"\u540C\u6B65api",children:[]}],git:{},filePathRelative:"javascript/nodejs/fs.md"};export{t as data};

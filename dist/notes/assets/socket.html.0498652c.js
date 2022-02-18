@@ -1,9 +1,0 @@
-import{e as n}from"./app.bfc0a8ee.js";import{_ as s}from"./plugin-vue_export-helper.21dcd24c.js";const a={},e=n(`<h2 id="\u521B\u5EFA\u5957\u63A5\u5B57" tabindex="-1"><a class="header-anchor" href="#\u521B\u5EFA\u5957\u63A5\u5B57" aria-hidden="true">#</a> \u521B\u5EFA\u5957\u63A5\u5B57</h2><div class="language-python ext-py line-numbers-mode"><pre class="language-python"><code><span class="token keyword">import</span> socket
-sock <span class="token operator">=</span> socket<span class="token punctuation">.</span>socket<span class="token punctuation">(</span>
-    socket<span class="token punctuation">.</span>AF_INET<span class="token punctuation">,</span>
-    socket<span class="token punctuation">.</span>SOCK_STREAM <span class="token operator">|</span> socket<span class="token punctuation">.</span>SOCK_NONBLOCK<span class="token punctuation">)</span>
-
-</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h2 id="\u5173\u95ED\u5957\u63A5\u5B57" tabindex="-1"><a class="header-anchor" href="#\u5173\u95ED\u5957\u63A5\u5B57" aria-hidden="true">#</a> \u5173\u95ED\u5957\u63A5\u5B57</h2><div class="language-python ext-py line-numbers-mode"><pre class="language-python"><code>socket<span class="token punctuation">.</span>close<span class="token punctuation">(</span>fd<span class="token punctuation">)</span>
-<span class="token comment"># fd:\u6587\u4EF6\u63CF\u8FF0\u7B26</span>
-
-</code></pre><div class="line-numbers"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div>`,4);function p(t,c){return e}var l=s(a,[["render",p]]);export{l as default};

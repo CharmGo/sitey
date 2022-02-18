@@ -1,1 +1,0 @@
-import{o as e,c,a}from"./app.bfc0a8ee.js";import{_ as t}from"./plugin-vue_export-helper.21dcd24c.js";var s="/notes/assets/899ecb89b2e4a5cca532b43b5b20544a.ccd21ecb.png";const _={},o=a("img",{src:s,alt:"899ecb89b2e4a5cca532b43b5b20544a.png"},null,-1),r=[o];function n(b,l){return e(),c("p",null,r)}var i=t(_,[["render",n]]);export{i as default};
